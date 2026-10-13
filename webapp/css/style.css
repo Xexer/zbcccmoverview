@@ -1,12 +1,26 @@
-.zbcCcmContainer {
-    padding: 1rem 0.5rem 0.5rem 1rem;
-    background-color: var(--sapGroup_ContentBackground);
-    border-radius: var(--sapElement_BorderCornerRadius);
-    box-shadow: var(--sapContent_Shadow0);
-}
-
 .zbcCcmTile {
     cursor: pointer;
+}
+
+.zbcCcmTileContent {
+    padding: 0.75rem;
+}
+
+.zbcCcmLegendItem {
+    margin-right: 1.5rem;
+}
+
+.zbcCcmLegendSwatch {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+}
+
+.zbcCcmLegendSystem {
+    background-color: #6a7d8f;
+    border-color: #44525f;
 }
 
 .zbcCcmLevel.sapMText {
@@ -19,24 +33,24 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.zbcCcmLevelA.sapMText {
+.zbcCcmLevelA {
     background-color: #188918;
 }
 
-.zbcCcmLevelB.sapMText {
+.zbcCcmLevelB {
     background-color: #6aa220;
 }
 
-.zbcCcmLevelC.sapMText {
+.zbcCcmLevelC {
     background-color: #f0a000;
 }
 
-.zbcCcmLevelD.sapMText {
+.zbcCcmLevelD {
     background-color: #f4690c;
 }
 
 .zbcCcmSid {
-    margin: 0.75rem;
+    margin: 0.75rem 0.5rem 0;
     padding: 0.5rem 0.25rem;
     background-color: #6a7d8f;
     border: 1px solid #44525f;

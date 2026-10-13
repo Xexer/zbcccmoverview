@@ -18,7 +18,29 @@
             </f:DynamicPageHeader>
         </f:header>
         <f:content>
-            <VBox id="tileWrapper" class="zbcCcmContainer">
+            <VBox id="tileWrapper">
+                <FlexBox id="legend" wrap="Wrap" alignItems="Center" class="sapUiSmallMarginBottom">
+                    <HBox id="legendA" alignItems="Center" class="zbcCcmLegendItem">
+                        <HBox id="legendSwatchA" class="zbcCcmLegendSwatch zbcCcmLevelA" />
+                        <Text id="legendTextA" text="{i18n>LegendLevelA}" />
+                    </HBox>
+                    <HBox id="legendB" alignItems="Center" class="zbcCcmLegendItem">
+                        <HBox id="legendSwatchB" class="zbcCcmLegendSwatch zbcCcmLevelB" />
+                        <Text id="legendTextB" text="{i18n>LegendLevelB}" />
+                    </HBox>
+                    <HBox id="legendC" alignItems="Center" class="zbcCcmLegendItem">
+                        <HBox id="legendSwatchC" class="zbcCcmLegendSwatch zbcCcmLevelC" />
+                        <Text id="legendTextC" text="{i18n>LegendLevelC}" />
+                    </HBox>
+                    <HBox id="legendD" alignItems="Center" class="zbcCcmLegendItem">
+                        <HBox id="legendSwatchD" class="zbcCcmLegendSwatch zbcCcmLevelD" />
+                        <Text id="legendTextD" text="{i18n>LegendLevelD}" />
+                    </HBox>
+                    <HBox id="legendSystem" alignItems="Center" class="zbcCcmLegendItem">
+                        <HBox id="legendSwatchSystem" class="zbcCcmLegendSwatch zbcCcmLegendSystem" />
+                        <Text id="legendTextSystem" text="{i18n>LegendSystem}" />
+                    </HBox>
+                </FlexBox>
                 <FlexBox
                     id="tileContainer"
                     wrap="Wrap"
@@ -30,10 +52,10 @@
                         templateShareable: false
                     }">
                     <items>
-                        <f:Card id="tile" semanticRole="ListItem" press=".onTilePress" width="7.5rem"
+                        <f:Card id="tile" semanticRole="ListItem" press=".onTilePress" width="9rem"
                             class="zbcCcmTile sapUiSmallMarginEnd sapUiSmallMarginBottom">
                             <f:content>
-                                <VBox id="tileContent" width="100%">
+                                <VBox id="tileContent" width="100%" class="zbcCcmTileContent">
                                     <Text id="levelA" text="{LevelAObjects}" textAlign="Center" class="zbcCcmLevel zbcCcmLevelA" />
                                     <Text id="levelB" text="{LevelBObjects}" textAlign="Center" class="zbcCcmLevel zbcCcmLevelB" />
                                     <Text id="levelC" text="{LevelCObjects}" textAlign="Center" class="zbcCcmLevel zbcCcmLevelC" />
