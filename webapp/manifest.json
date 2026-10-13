@@ -34,6 +34,15 @@
           "odataVersion": "4.0"
         }
       }
+    },
+    "crossNavigation": {
+      "outbounds": {
+        "toCcmDashboard": {
+          "semanticObject": "ZBC_CCM_DASHBOARD",
+          "action": "display",
+          "parameters": {}
+        }
+      }
     }
   },
   "sap.ui": {
@@ -59,7 +68,9 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.core": {}
+        "sap.f": {},
+        "sap.fe.core": {},
+        "sap.fe.macros": {}
       }
     },
     "contentDensities": {

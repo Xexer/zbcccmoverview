@@ -20,6 +20,14 @@ sap.ui.define(
                 this._applyCalculationMethodFilter();
             },
 
+            onTilePress: function (oEvent) {
+                const oTileData = oEvent.getSource().getBindingContext().getObject();
+                this.getExtensionAPI().getIntentBasedNavigation().navigateOutbound('toCcmDashboard', {
+                    ProviderID: oTileData.ProviderID,
+                    CalculationMethod: oTileData.CalculationMethod
+                });
+            },
+
             _applyCalculationMethodFilter: async function () {
                 const oFilterBar = this.byId('CalcMethodFilterBar');
                 const oSelectionVariant = await oFilterBar.getSelectionVariant();
