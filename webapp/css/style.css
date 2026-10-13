@@ -1,0 +1,46 @@
+.zbcCcmTile {
+    width: 7.5rem;
+}
+
+.zbcCcmLevel.sapMText {
+    display: block;
+    padding: 0.75rem 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.zbcCcmLevelA.sapMText {
+    background-color: #188918;
+}
+
+.zbcCcmLevelB.sapMText {
+    background-color: #6aa220;
+}
+
+.zbcCcmLevelC.sapMText {
+    background-color: #f0a000;
+}
+
+.zbcCcmLevelD.sapMText {
+    background-color: #f4690c;
+}
+
+.zbcCcmSid {
+    margin: 1rem 0.75rem 0;
+    padding: 0.5rem 0.25rem;
+    background-color: #6a7d8f;
+    border: 1px solid #44525f;
+    border-radius: 0.5rem;
+}
+
+.zbcCcmSidText.sapMText {
+    color: #fff;
+    text-align: center;
+}
+
+.zbcCcmSidTitle.sapMText {
+    font-weight: bold;
+}

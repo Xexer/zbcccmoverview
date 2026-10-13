@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="SAP__analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AUTHORIZATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Authorization.V1" Alias="SAP__authorization"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="SAP__communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="SAP__personalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SUPPORT',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Support.v1" Alias="SAP__support"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd.zbc_ccm_dashboard.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="DashboardType">
+                <Key>
+                    <PropertyRef Name="ProviderID"/>
+                    <PropertyRef Name="CalculationMethod"/>
+                </Key>
+                <Property Name="ProviderID" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="CalculationMethod" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="SystemName" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60"/>
+                <Property Name="TechnicalDebtScore" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="LevelAObjects" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="LevelBObjects" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="LevelCObjects" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="LevelDObjects" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="KeyUserObjects" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="RunTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CloudReady" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="UpgradeStable" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="CriticalityLevelA" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="CriticalityLevelB" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="CriticalityLevelC" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="CriticalityLevelD" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="ChangeLevelA" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="ChangeLevelB" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="ChangeLevelC" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="ChangeLevelD" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="ChangeTechnicalDebt" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <Property Name="ChangeKeyUser" Type="Edm.String" Nullable="false" MaxLength="15"/>
+                <NavigationProperty Name="_OtherScores" Type="Collection(com.sap.gateway.srvd.zbc_ccm_dashboard.v0001.ScoresType)" Partner="_Dashboard">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="ScoresType">
+                <Key>
+                    <PropertyRef Name="ProviderID"/>
+                    <PropertyRef Name="CalculationMethod"/>
+                    <PropertyRef Name="RunTime"/>
+                </Key>
+                <Property Name="ProviderID" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="CalculationMethod" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="RunTime" Type="Edm.DateTimeOffset" Nullable="false" Precision="7"/>
+                <Property Name="RunPeriod" Type="Edm.String" Nullable="false" MaxLength="6"/>
+                <Property Name="LevelAObjects" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="LevelBObjects" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="LevelCObjects" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="LevelDObjects" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="TechnicalDebtScore" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="KeyUserObjects" Type="Edm.Int64" Nullable="false"/>
+                <NavigationProperty Name="_Dashboard" Type="com.sap.gateway.srvd.zbc_ccm_dashboard.v0001.DashboardType" Nullable="false" Partner="_OtherScores">
+                    <ReferentialConstraint Property="ProviderID" ReferencedProperty="ProviderID"/>
+                    <ReferentialConstraint Property="CalculationMethod" ReferencedProperty="CalculationMethod"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="Dashboard" EntityType="com.sap.gateway.srvd.zbc_ccm_dashboard.v0001.DashboardType">
+                    <NavigationPropertyBinding Path="_OtherScores" Target="Scores"/>
+                </EntitySet>
+                <EntitySet Name="Scores" EntityType="com.sap.gateway.srvd.zbc_ccm_dashboard.v0001.ScoresType">
+                    <NavigationPropertyBinding Path="_Dashboard" Target="Dashboard"/>
+                </EntitySet>
+            </EntityContainer>
+            <Annotations Target="SAP__self.DashboardType/ProviderID">
+                <Annotation Term="SAP__common.Text" Path="SystemName">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zbc_i_ccmprovidervh/0001;ps='srvd-zbc_ccm_dashboard-0001';va='com.sap.gateway.srvd.zbc_ccm_dashboard.v0001.et-zbc_c_ccmdashboard.providerid'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Label" String="Obj Provider"/>
+                <Annotation Term="SAP__common.Heading" String="Object Provider"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Object Provider ID"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SCA_DS_OBJECT_PROVIDER_ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/CalculationMethod">
+                <Annotation Term="SAP__common.Text" Path="Description">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zbc_i_ccmcalculationmethod/0001;ps='srvd-zbc_ccm_dashboard-0001';va='com.sap.gateway.srvd.zbc_ccm_dashboard.v0001.et-zbc_c_ccmdashboard.calculationmethod'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+                <Annotation Term="SAP__common.FilterDefaultValue" String=""/>
+                <Annotation Term="SAP__common.Label" String="Calculate Method"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/LevelAObjects">
+                <Annotation Term="SAP__common.Label" String="Level A"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects Character"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/LevelBObjects">
+                <Annotation Term="SAP__common.Label" String="Level B"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects Character"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/LevelCObjects">
+                <Annotation Term="SAP__common.Label" String="Level C"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects Character"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/LevelDObjects">
+                <Annotation Term="SAP__common.Label" String="Level D"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects Character"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/KeyUserObjects">
+                <Annotation Term="SAP__common.Label" String="Key User"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/CloudReady">
+                <Annotation Term="SAP__common.Label" String="Cloud Ready"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/UpgradeStable">
+                <Annotation Term="SAP__common.Label" String="Upgrade Stable"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/ChangeLevelA">
+                <Annotation Term="SAP__common.Label" String="Change Level A"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/ChangeLevelB">
+                <Annotation Term="SAP__common.Label" String="Change Level B"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/ChangeLevelC">
+                <Annotation Term="SAP__common.Label" String="Change Level C"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/ChangeLevelD">
+                <Annotation Term="SAP__common.Label" String="Change Level D"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/ChangeTechnicalDebt">
+                <Annotation Term="SAP__common.Label" String="Change Technical Debt"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/ChangeKeyUser">
+                <Annotation Term="SAP__common.Label" String="Change Key User"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/_OtherScores">
+                <Annotation Term="SAP__common.Composition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Dashboard">
+                <Annotation Term="SAP__capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_OtherScores"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="Filterable" Bool="true"/>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="CalculationMethod"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequiredProperties">
+                            <Collection>
+                                <PropertyPath>CalculationMethod</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>CloudReady</PropertyPath>
+                                <PropertyPath>UpgradeStable</PropertyPath>
+                                <PropertyPath>CriticalityLevelA</PropertyPath>
+                                <PropertyPath>CriticalityLevelB</PropertyPath>
+                                <PropertyPath>CriticalityLevelC</PropertyPath>
+                                <PropertyPath>CriticalityLevelD</PropertyPath>
+                                <PropertyPath>ChangeLevelA</PropertyPath>
+                                <PropertyPath>ChangeLevelB</PropertyPath>
+                                <PropertyPath>ChangeLevelC</PropertyPath>
+                                <PropertyPath>ChangeLevelD</PropertyPath>
+                                <PropertyPath>ChangeTechnicalDebt</PropertyPath>
+                                <PropertyPath>ChangeKeyUser</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>CloudReady</PropertyPath>
+                                <PropertyPath>UpgradeStable</PropertyPath>
+                                <PropertyPath>CriticalityLevelA</PropertyPath>
+                                <PropertyPath>CriticalityLevelB</PropertyPath>
+                                <PropertyPath>CriticalityLevelC</PropertyPath>
+                                <PropertyPath>CriticalityLevelD</PropertyPath>
+                                <PropertyPath>ChangeLevelA</PropertyPath>
+                                <PropertyPath>ChangeLevelB</PropertyPath>
+                                <PropertyPath>ChangeLevelC</PropertyPath>
+                                <PropertyPath>ChangeLevelD</PropertyPath>
+                                <PropertyPath>ChangeTechnicalDebt</PropertyPath>
+                                <PropertyPath>ChangeKeyUser</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>_OtherScores</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType">
+                <Annotation Term="SAP__common.Label" String="Dashboard"/>
+                <Annotation Term="SAP__UI.Facets">
+                    <Collection>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Scores"/>
+                            <PropertyValue Property="ID" String="idScore"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Technical Debt Score"/>
+                                        <PropertyValue Property="ID" String="idDebt"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#TDEBT"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="KPIs"/>
+                                        <PropertyValue Property="ID" String="idQuota"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#QUOTA"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Cloud"/>
+                            <PropertyValue Property="ID" String="idCloud"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Level A Objects"/>
+                                        <PropertyValue Property="ID" String="idCloudA"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#CLOUDA"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Key User Objects"/>
+                                        <PropertyValue Property="ID" String="idKeyUser"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#KUSER"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Other Levels"/>
+                            <PropertyValue Property="ID" String="idNumbers"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Level B Objects"/>
+                                        <PropertyValue Property="ID" String="idLevelB"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#LEVELB"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Level C Objects"/>
+                                        <PropertyValue Property="ID" String="idLevelC"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#LEVELC"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Level D Objects"/>
+                                        <PropertyValue Property="ID" String="idLevelD"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#LEVELD"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="CLOUDA">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Criticality" Path="CriticalityLevelA"/>
+                                    <PropertyValue Property="Value" Path="LevelAObjects"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangeLevelA"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="KUSER">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Criticality" Path="CriticalityLevelA"/>
+                                    <PropertyValue Property="Value" Path="KeyUserObjects"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangeKeyUser"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="LEVELB">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Criticality" Path="CriticalityLevelB"/>
+                                    <PropertyValue Property="Value" Path="LevelBObjects"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangeLevelB"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="LEVELC">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Criticality" Path="CriticalityLevelC"/>
+                                    <PropertyValue Property="Value" Path="LevelCObjects"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangeLevelC"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="LEVELD">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Criticality" Path="CriticalityLevelD"/>
+                                    <PropertyValue Property="Value" Path="LevelDObjects"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangeLevelD"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="QUOTA">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="CloudReady"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="UpgradeStable"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="TDEBT">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="TechnicalDebtScore"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangeTechnicalDebt"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="System"/>
+                        <PropertyValue Property="TypeNamePlural" String="Systems"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="SAP__UI.DataField">
+                                <PropertyValue Property="Value" Path="ProviderID"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="SAP__UI.DataField">
+                                <PropertyValue Property="Value" Path="CalculationMethod"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="SystemName"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="SystemName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataFieldWithIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="ZBC_CCM_OBJECT"/>
+                            <PropertyValue Property="Action" String="display"/>
+                            <PropertyValue Property="Value" Path="ProviderID"/>
+                            <PropertyValue Property="Mapping">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="SemanticObjectProperty" String="ProviderId"/>
+                                        <PropertyValue Property="LocalProperty" PropertyPath="ProviderID"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="CloudReady"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="UpgradeStable"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="TechnicalDebtScore"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Criticality" Path="CriticalityLevelA"/>
+                            <PropertyValue Property="Value" Path="LevelAObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Criticality" Path="CriticalityLevelB"/>
+                            <PropertyValue Property="Value" Path="LevelBObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Criticality" Path="CriticalityLevelC"/>
+                            <PropertyValue Property="Value" Path="LevelCObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Criticality" Path="CriticalityLevelD"/>
+                            <PropertyValue Property="Value" Path="LevelDObjects"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.PresentationVariant" Qualifier="pVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="SAP__common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="TechnicalDebtScore"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@SAP__UI.LineItem</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>ProviderID</PropertyPath>
+                        <PropertyPath>CalculationMethod</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionPresentationVariant">
+                    <Record>
+                        <PropertyValue Property="Text" String=""/>
+                        <PropertyValue Property="PresentationVariant" Path="@SAP__UI.PresentationVariant#pVariant"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/ProviderID">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Obj Provider"/>
+                <Annotation Term="SAP__common.Heading" String="Object Provider"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Object Provider ID"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SCA_DS_OBJECT_PROVIDER_ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/CalculationMethod">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Calculate Method"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/RunTime">
+                <Annotation Term="SAP__common.Label" String="Run Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/LevelAObjects">
+                <Annotation Term="SAP__common.Label" String="Level A"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/LevelBObjects">
+                <Annotation Term="SAP__common.Label" String="Level B"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/LevelCObjects">
+                <Annotation Term="SAP__common.Label" String="Level C"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/LevelDObjects">
+                <Annotation Term="SAP__common.Label" String="Level D"/>
+                <Annotation Term="SAP__common.Heading" String="Objects"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Objects"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Scores">
+                <Annotation Term="SAP__capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Dashboard"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>_Dashboard</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType">
+                <Annotation Term="SAP__common.Label" String="Score for Dashboard"/>
+                <Annotation Term="SAP__aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>filter</String>
+                                <String>identity</String>
+                                <String>orderby</String>
+                                <String>skip</String>
+                                <String>top</String>
+                                <String>groupby</String>
+                                <String>aggregate</String>
+                                <String>concat</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="GroupableProperties">
+                            <Collection>
+                                <PropertyPath>CalculationMethod</PropertyPath>
+                                <PropertyPath>KeyUserObjects</PropertyPath>
+                                <PropertyPath>ProviderID</PropertyPath>
+                                <PropertyPath>RunPeriod</PropertyPath>
+                                <PropertyPath>RunTime</PropertyPath>
+                                <PropertyPath>TechnicalDebtScore</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.Chart" Qualifier="idTimeChart">
+                    <Record Type="SAP__UI.ChartDefinitionType">
+                        <PropertyValue Property="Title" String="Time Overview"/>
+                        <PropertyValue Property="Description" String="Shows the system over the time"/>
+                        <PropertyValue Property="ChartType" EnumMember="SAP__UI.ChartType/ColumnDual"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>RunTime</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="SAP__UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="RunTime"/>
+                                    <PropertyValue Property="Role" EnumMember="SAP__UI.ChartDimensionRoleType/Category"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>LevelDObjects</PropertyPath>
+                                <PropertyPath>LevelCObjects</PropertyPath>
+                                <PropertyPath>LevelBObjects</PropertyPath>
+                                <PropertyPath>LevelAObjects</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="SAP__UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="LevelBObjects"/>
+                                    <PropertyValue Property="Role" EnumMember="SAP__UI.ChartMeasureRoleType/Axis2"/>
+                                </Record>
+                                <Record Type="SAP__UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="LevelAObjects"/>
+                                    <PropertyValue Property="Role" EnumMember="SAP__UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.Facets">
+                    <Collection>
+                        <Record Type="SAP__UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Scores"/>
+                            <PropertyValue Property="ID" String="idGeneral"/>
+                            <PropertyValue Property="Target" AnnotationPath="@SAP__UI.Identification#GENERAL"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification" Qualifier="GENERAL">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="RunTime"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="TechnicalDebtScore"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelAObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelBObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelCObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelDObjects"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="RunTime"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="TechnicalDebtScore"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelAObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelBObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelCObjects"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="LevelDObjects"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__aggregation.CustomAggregate" Qualifier="LevelAObjects" String="Edm.Int64"/>
+                <Annotation Term="SAP__aggregation.CustomAggregate" Qualifier="LevelBObjects" String="Edm.Int64"/>
+                <Annotation Term="SAP__aggregation.CustomAggregate" Qualifier="LevelCObjects" String="Edm.Int64"/>
+                <Annotation Term="SAP__aggregation.CustomAggregate" Qualifier="LevelDObjects" String="Edm.Int64"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__UI.LeadingEntitySet" String="Dashboard"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__support.TechnicalInfoLinks">
+                    <Record>
+                        <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="FunctionImport" String="GetTechnicalInfoLinks"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="TextDirectionLayout" Bool="true"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                        <PropertyValue Property="UploadToFileShare" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.BatchSupport">
+                    <Record>
+                        <PropertyValue Property="SupportedFormats">
+                            <Collection>
+                                <String>application/json</String>
+                                <String>multipart/mixed</String>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/SystemName">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="System Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/Description">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Short Descript."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Short Text for Fixed Values"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VAL_TEXT"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/CriticalityLevelA">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="INT1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="1 Byte Unsigned Integer"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/CriticalityLevelB">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="INT1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="1 Byte Unsigned Integer"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/CriticalityLevelC">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="INT1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="1 Byte Unsigned Integer"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/CriticalityLevelD">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="INT1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="1 Byte Unsigned Integer"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DashboardType/TechnicalDebtScore">
+                <Annotation Term="SAP__common.Label" String="Technical Debt"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/RunPeriod">
+                <Annotation Term="SAP__common.Label" String="Run Period"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/TechnicalDebtScore">
+                <Annotation Term="SAP__common.Label" String="Technical Debt"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ScoresType/KeyUserObjects">
+                <Annotation Term="SAP__common.Label" String="Objects"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

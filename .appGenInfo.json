@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Tue Oct 13 2026 16:45:04 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP Cloud)",
+    "metadataFilename": "",
+    "serviceUrl": "https://7181185d-00d2-4490-ac37-c873482b9b74.abap.eu10.hana.ondemand.com/sap/opu/odata4/sap/zbc_ui_ccm_dashboard_o4/srvd/sap/zbc_ccm_dashboard/0001/",
+    "appName": "zbcccmoverview",
+    "appTitle": "CCM Overview",
+    "appDescription": "CCM System Overview",
+    "appNamespace": "rewe.bc",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.148.10",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.33.0",
+    "template": "Custom Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Dashboard"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```",
+    "valueHelpDownloaded": true
+  }
+}

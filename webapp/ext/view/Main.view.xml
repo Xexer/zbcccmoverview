@@ -1,0 +1,38 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:macros="sap.fe.macros"
+    xmlns:html="http://www.w3.org/1999/xhtml" controllerName="rewe.bc.zbcccmoverview.ext.view.Main">
+    <Page id="Main" title="{i18n>MainTitle}">
+        <content>
+            <VBox id="mainLayout" class="sapUiSmallMargin">
+                <macros:FilterBar
+                    id="CalcMethodFilterBar"
+                    metaPath="@com.sap.vocabularies.UI.v1.SelectionFields#CalcMethod"
+                    search=".onSearch"
+                />
+                <FlexBox
+                    id="tileContainer"
+                    wrap="Wrap"
+                    alignItems="Start"
+                    class="sapUiSmallMarginTop"
+                    items="{
+                        path: '/Dashboard',
+                        suspended: true,
+                        length: 1000,
+                        templateShareable: false
+                    }">
+                    <items>
+                        <VBox id="tile" class="zbcCcmTile sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                            <Text id="levelA" text="{LevelAObjects}" class="zbcCcmLevel zbcCcmLevelA" />
+                            <Text id="levelB" text="{LevelBObjects}" class="zbcCcmLevel zbcCcmLevelB" />
+                            <Text id="levelC" text="{LevelCObjects}" class="zbcCcmLevel zbcCcmLevelC" />
+                            <Text id="levelD" text="{LevelDObjects}" class="zbcCcmLevel zbcCcmLevelD" />
+                            <VBox id="sidBox" alignItems="Center" class="zbcCcmSid">
+                                <Text id="sidText" text="{ProviderID}" class="zbcCcmSidText zbcCcmSidTitle" />
+                                <Text id="sidQuota" text="[{CloudReady} | {UpgradeStable}]" class="zbcCcmSidText" />
+                            </VBox>
+                        </VBox>
+                    </items>
+                </FlexBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
