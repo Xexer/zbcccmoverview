@@ -17,6 +17,7 @@
                 <Annotation Term="UI.SelectionFields" Qualifier="CalcMethod">
                     <Collection>
                         <PropertyPath>CalculationMethod</PropertyPath>
+                        <PropertyPath>ProviderID</PropertyPath>
                     </Collection>
                 </Annotation>
             </Annotations>

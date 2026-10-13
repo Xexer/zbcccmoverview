@@ -13,11 +13,11 @@ sap.ui.define(
         return PageController.extend('rewe.bc.zbcccmoverview.ext.view.Main', {
             onInit: function () {
                 PageController.prototype.onInit.apply(this, arguments);
-                this._applyCalculationMethodFilter();
+                this._applyFilters();
             },
 
             onSearch: function () {
-                this._applyCalculationMethodFilter();
+                this._applyFilters();
             },
 
             onTilePress: function (oEvent) {
@@ -28,14 +28,17 @@ sap.ui.define(
                 });
             },
 
-            _applyCalculationMethodFilter: async function () {
+            _applyFilters: async function () {
                 const oFilterBar = this.byId('CalcMethodFilterBar');
                 const oSelectionVariant = await oFilterBar.getSelectionVariant();
-                const aOptions = oSelectionVariant.getSelectOption('CalculationMethod');
-                const sCalculationMethod = aOptions && aOptions.length ? aOptions[0].Low : DEFAULT_CALCULATION_METHOD;
+                const aCalcMethodOptions = oSelectionVariant.getSelectOption('CalculationMethod');
+                const aFilters = oFilterBar.getFilters().filters || [];
+                if (!aCalcMethodOptions || !aCalcMethodOptions.length) {
+                    aFilters.push(new Filter('CalculationMethod', FilterOperator.EQ, DEFAULT_CALCULATION_METHOD));
+                }
 
                 const oBinding = this.byId('tileContainer').getBinding('items');
-                oBinding.filter(new Filter('CalculationMethod', FilterOperator.EQ, sCalculationMethod));
+                oBinding.filter(aFilters);
                 if (oBinding.isSuspended()) {
                     oBinding.resume();
                 }
