@@ -10,11 +10,22 @@
         </f:title>
         <f:header>
             <f:DynamicPageHeader id="MainPageHeader" pinnable="true">
-                <macros:FilterBar
-                    id="CalcMethodFilterBar"
-                    metaPath="@com.sap.vocabularies.UI.v1.SelectionFields#CalcMethod"
-                    search=".onSearch"
-                />
+                <FlexBox id="headerContent" alignItems="Start">
+                    <VBox id="showChangesBox" class="zbcCcmShowChanges">
+                        <Label id="showChangesLabel" text="{i18n>ShowChanges}" labelFor="showChangesSwitch" showColon="true" />
+                        <Switch id="showChangesSwitch" state="{view>/showChanges}" />
+                    </VBox>
+                    <VBox id="filterBarBox">
+                        <layoutData>
+                            <FlexItemData id="filterBarBoxLayout" growFactor="1" />
+                        </layoutData>
+                        <macros:FilterBar
+                            id="CalcMethodFilterBar"
+                            metaPath="@com.sap.vocabularies.UI.v1.SelectionFields#CalcMethod"
+                            search=".onSearch"
+                        />
+                    </VBox>
+                </FlexBox>
             </f:DynamicPageHeader>
         </f:header>
         <f:content>
@@ -56,11 +67,26 @@
                             class="zbcCcmTile sapUiSmallMarginEnd sapUiSmallMarginBottom">
                             <f:content>
                                 <VBox id="tileContent" width="100%" class="zbcCcmTileContent">
-                                    <Text id="techDebt" text="{TechnicalDebtScore}" tooltip="{i18n>TechnicalDebtScore}" textAlign="Center" wrapping="false" class="zbcCcmTechDebt" />
-                                    <Text id="levelA" text="{LevelAObjects}" textAlign="Center" class="zbcCcmLevel zbcCcmLevelA" />
-                                    <Text id="levelB" text="{LevelBObjects}" textAlign="Center" class="zbcCcmLevel zbcCcmLevelB" />
-                                    <Text id="levelC" text="{LevelCObjects}" textAlign="Center" class="zbcCcmLevel zbcCcmLevelC" />
-                                    <Text id="levelD" text="{LevelDObjects}" textAlign="Center" class="zbcCcmLevel zbcCcmLevelD" />
+                                    <FlexBox id="techDebtBox" wrap="Wrap" justifyContent="Center" alignItems="Baseline" class="zbcCcmTechDebt">
+                                        <Text id="techDebt" text="{TechnicalDebtScore}" tooltip="{i18n>TechnicalDebtScore}" wrapping="false" class="zbcCcmTechDebtValue" />
+                                        <Text id="techDebtChange" text="({ChangeTechnicalDebt})" visible="{view>/showChanges}" wrapping="false" class="zbcCcmChange" />
+                                    </FlexBox>
+                                    <FlexBox id="levelA" wrap="Wrap" justifyContent="Center" alignItems="Baseline" class="zbcCcmLevel zbcCcmLevelA">
+                                        <Text id="levelAValue" text="{LevelAObjects}" wrapping="false" class="zbcCcmLevelValue" />
+                                        <Text id="levelAChange" text="({ChangeLevelA})" visible="{view>/showChanges}" wrapping="false" class="zbcCcmChange" />
+                                    </FlexBox>
+                                    <FlexBox id="levelB" wrap="Wrap" justifyContent="Center" alignItems="Baseline" class="zbcCcmLevel zbcCcmLevelB">
+                                        <Text id="levelBValue" text="{LevelBObjects}" wrapping="false" class="zbcCcmLevelValue" />
+                                        <Text id="levelBChange" text="({ChangeLevelB})" visible="{view>/showChanges}" wrapping="false" class="zbcCcmChange" />
+                                    </FlexBox>
+                                    <FlexBox id="levelC" wrap="Wrap" justifyContent="Center" alignItems="Baseline" class="zbcCcmLevel zbcCcmLevelC">
+                                        <Text id="levelCValue" text="{LevelCObjects}" wrapping="false" class="zbcCcmLevelValue" />
+                                        <Text id="levelCChange" text="({ChangeLevelC})" visible="{view>/showChanges}" wrapping="false" class="zbcCcmChange" />
+                                    </FlexBox>
+                                    <FlexBox id="levelD" wrap="Wrap" justifyContent="Center" alignItems="Baseline" class="zbcCcmLevel zbcCcmLevelD">
+                                        <Text id="levelDValue" text="{LevelDObjects}" wrapping="false" class="zbcCcmLevelValue" />
+                                        <Text id="levelDChange" text="({ChangeLevelD})" visible="{view>/showChanges}" wrapping="false" class="zbcCcmChange" />
+                                    </FlexBox>
                                     <VBox id="sidBox" alignItems="Center" class="zbcCcmSid">
                                         <Text id="sidText" text="{ProviderID}" textAlign="Center" class="zbcCcmSidText zbcCcmSidTitle" />
                                         <Text id="sidQuota" text="[{CloudReady} | {UpgradeStable}]" textAlign="Center" class="zbcCcmSidText" />

@@ -2,9 +2,10 @@ sap.ui.define(
     [
         'sap/fe/core/PageController',
         'sap/ui/model/Filter',
-        'sap/ui/model/FilterOperator'
+        'sap/ui/model/FilterOperator',
+        'sap/ui/model/json/JSONModel'
     ],
-    function(PageController, Filter, FilterOperator) {
+    function(PageController, Filter, FilterOperator, JSONModel) {
         'use strict';
 
         // Empty key = "Standard" calculation method
@@ -13,6 +14,7 @@ sap.ui.define(
         return PageController.extend('rewe.bc.zbcccmoverview.ext.view.Main', {
             onInit: function () {
                 PageController.prototype.onInit.apply(this, arguments);
+                this.getView().setModel(new JSONModel({ showChanges: false }), 'view');
                 this._applyFilters();
             },
 
