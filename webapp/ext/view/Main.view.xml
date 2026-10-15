@@ -63,7 +63,7 @@
                         templateShareable: false
                     }">
                     <items>
-                        <f:Card id="tile" semanticRole="ListItem" press=".onTilePress" width="9rem"
+                        <f:Card id="tile" semanticRole="ListItem" press=".onTilePress" width="12rem"
                             class="zbcCcmTile sapUiSmallMarginEnd sapUiSmallMarginBottom">
                             <f:content>
                                 <VBox id="tileContent" width="100%" class="zbcCcmTileContent">
